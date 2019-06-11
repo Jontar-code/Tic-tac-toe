@@ -1,0 +1,463 @@
+<html>
+<head>
+<title>Tic Tac Toe</title>
+
+<script language=JavaScript>
+var toggle=true;
+var N=0;
+
+var topLeftSelected=false;
+var midLeftSelected=false;
+var botLeftSelected=false;
+
+var topMidSelected=false;
+var midMidSelected=false;
+var botMidSelected=false;
+
+var topRightSelected=false;
+var midRightSelected=false;
+var botRightSelected=false;
+
+var topLeftValue=0;
+var midLeftValue=0;
+var botLeftValue=0;
+
+var topMidValue=0;
+var midMidValue=0;
+var botMidValue=0;
+
+var topRightValue=0;
+var midRightValue=0;
+var botRightValue=0;
+
+function ticTacTopLeft()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(topLeftSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.topLeft.src="x.jpg";
+			toggle=false;
+			topLeftSelected=true;
+			topLeftValue=1;
+		}
+		else
+		{
+			document.topLeft.src="o.jpg";
+			toggle=true;
+			topLeftSelected=true;
+			topLeftValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacMidLeft()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(midLeftSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.midLeft.src="x.jpg";
+			toggle=false;
+			midLeftSelected=true;
+			midLeftValue=1;
+		}
+		else
+		{
+			document.midLeft.src="o.jpg";
+			toggle=true;
+			midLeftSelected=true;
+			midLeftValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacBotLeft()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(botLeftSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.botLeft.src="x.jpg";
+			toggle=false;
+			botLeftSelected=true;
+			botLeftValue=1;
+		}
+		else
+		{
+			document.botLeft.src="o.jpg";
+			toggle=true;
+			botLeftSelected=true;
+			botLeftValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacTopMid()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(topMidSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.topMid.src="x.jpg";
+			toggle=false;
+			topMidSelected=true;
+			topMidValue=1;
+		}
+		else
+		{
+			document.topMid.src="o.jpg";
+			toggle=true;
+			topMidSelected=true;
+			topMidValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacTopRight()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(topRightSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.topRight.src="x.jpg";
+			toggle=false;
+			topRightSelected=true;
+			topRightValue=1;
+		}
+		else
+		{
+			document.topRight.src="o.jpg";
+			toggle=true;
+			topRightSelected=true;
+			topRightValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacMidMid()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(midMidSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.midMid.src="x.jpg";
+			toggle=false;
+			midMidSelected=true;
+			midMidValue=1;
+		}
+		else
+		{
+			document.midMid.src="o.jpg";
+			toggle=true;
+			midMidSelected=true;
+			midMidValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacBotMid()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(botMidSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.botMid.src="x.jpg";
+			toggle=false;
+			botMidSelected=true;
+			botMidValue=1;
+		}
+		else
+		{
+			document.botMid.src="o.jpg";
+			toggle=true;
+			botMidSelected=true;
+			botMidValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacMidRight()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(midRightSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.midRight.src="x.jpg";
+			toggle=false;
+			midRightSelected=true;
+			midRightValue=1;
+		}
+		else
+		{
+			document.midRight.src="o.jpg";
+			toggle=true;
+			midRightSelected=true;
+			midRightValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function ticTacBotRight()
+{
+	//alert("Working as long as checkWinner isn't there");
+	if(botRightSelected==false)
+	{
+		if(toggle==true)
+		{
+			document.botRight.src="x.jpg";
+			toggle=false;
+			botRightSelected=true;
+			botRightValue=1;
+		}
+		else
+		{
+			document.botRight.src="o.jpg";
+			toggle=true;
+			botRightSelected=true;
+			botRightValue=2;
+		}
+	}
+	else
+	{
+		alert("That square has been selected already");
+	}
+	checkWinner();
+	
+}
+
+function checkWinner()
+{
+	//alert("Things!");
+	if(topLeftSelected==true && topMidSelected==true && topRightSelected==true)
+	{
+		if(midLeftSelected==true && midMidSelected==true && midRightSelected==true)
+		{
+			if(botLeftSelected==true && botMidSelected==true && botRightSelected==true)
+			{
+				//alert("Game Over!");
+				//top row win check
+				if(topLeftValue==topMidValue && topMidValue==topRightValue)
+				{
+					if(topLeftValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+				//left column win check
+				else if(topLeftValue==midLeftValue && midLeftValue==botLeftValue)
+				{
+					if(topLeftValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+				//middle row win check
+				else if(midLeftValue==midMidValue && midMidValue==midRightValue)
+				{
+					if(midLeftValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+				//middle column win check
+				else if(topMidValue==midMidValue && midMidValue==botMidValue)
+				{
+					if(topMidValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+				//bottom row win check
+				else if(botLeftValue==botMidValue && botMidValue==botRightValue)
+				{
+					if(botLeftValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+				//right column win check
+				else if(topRightValue==midRightValue && midRightValue==botRightValue)
+				{
+					if(topRightValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+				//backslash win check
+				else if(topLeftValue==midMidValue && midMidValue==botRightValue)
+				{
+					if(topLeftValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+				//forwardslash win check
+				else if(botLeftValue==midMidValue && midMidValue==topLeftValue)
+				{
+					if(botLeftValue==1)
+					{
+						alert("Game over: X wins!")
+					}
+					else
+					{
+						alert("Game over: O wins!")
+					}
+				}
+			}
+		}
+	}
+}
+
+function boardReset()
+{
+	document.topLeft.src="blank.jpg";
+	document.topMid.src="blank.jpg";
+	document.topRight.src="blank.jpg";
+	
+	document.midLeft.src="blank.jpg";
+	document.midMid.src="blank.jpg";
+	document.midRight.src="blank.jpg";
+	
+	document.botLeft.src="blank.jpg";
+	document.botMid.src="blank.jpg";
+	document.botRight.src="blank.jpg";
+	
+	topLeftSelected=false;
+	midLeftSelected=false;
+	botLeftSelected=false;
+
+	topMidSelected=false;
+	midMidSelected=false;
+	botMidSelected=false;
+
+	topRightSelected=false;
+	midRightSelected=false;
+	botRightSelected=false;
+	
+	topLeftValue=0;
+	midLeftValue=0;
+	botLeftValue=0;
+
+	topMidValue=0;
+	midMidValue=0;
+	botMidValue=0;
+
+	topRightValue=0;
+	midRightValue=0;
+	botRightValue=0;
+	
+	toggle=true;
+	
+}
+</script>
+</head>
+<body style="background-color:lightblue">
+<h1> Tic Tac Toe!</h1>
+<br />
+
+<img src="blank.jpg" name=topLeft width=100 height=100 onclick="ticTacTopLeft();" >
+<img src="blank.jpg" name=topMid width=100 height=100 onclick="ticTacTopMid();" />
+<img src="blank.jpg" name=topRight width=100 height=100 onclick="ticTacTopRight();" />
+<br />
+<img src="blank.jpg" name=midLeft width=100 height=100 onclick="ticTacMidLeft();" />
+<img src="blank.jpg" name=midMid width=100 height=100 onclick="ticTacMidMid();" />
+<img src="blank.jpg" name=midRight width=100 height=100 onclick="ticTacMidRight();" />
+<br />
+<img src="blank.jpg" name=botLeft width=100 height=100 onclick="ticTacBotLeft();" />
+<img src="blank.jpg" name=botMid width=100 height=100 onclick="ticTacBotMid();" />
+<img src="blank.jpg" name=botRight width=100 height=100 onclick="ticTacBotRight();" />
+<br />
+<br />
+X Wins: <input type=text name=xWins value="0" /> <br />
+O Wins: <input type=text name=oWins value="0" />
+<br />
+<br />
+<input type=button name=gameReset value="Reset Board" onclick="boardReset();" />
+
+</body>
+</html>
